@@ -1,0 +1,81 @@
+<view class="container">
+    <view class="mingpan">
+        <image src="{{mp.banner}}" class="banner" mode="widthFix"></image>
+        <view class="mp-title">
+            <text>您的八字命盘</text>
+        </view>
+        <view class="mp-user">
+            <text>姓名：<text class="sort-detail">{{mp.name}}</text>\n</text>
+            <text>性别：<text class="sort-detail">{{mp.gender}}</text>\n</text>
+            <text>公历：<text class="sort-detail">{{mp.solar}}</text>\n</text>
+            <text>农历：<text class="sort-detail">{{mp.lunar}}</text>\n</text>
+        </view>
+        <!--命盘-->
+        <view class="bazi">
+            <view class="bazi-title">
+                <text style="visibility:hidden;" class="bazi-name">占位</text>
+                <text class="parts emps">年柱</text>
+                <text class="parts emps">月柱</text>
+                <text class="parts emps">日柱</text>
+                <text class="parts emps">时柱</text>
+            </view>
+            <view class="bazi-type">
+                <text class="bazi-name">十神</text>
+                <text wx:for="{{mp.shiShen}}" class="parts">{{item}}</text>
+            </view>
+            <view class="bazi-type">
+                <text class="bazi-name">干造</text>
+                <text wx:for="{{mp.qianZaoKunZao}}" class="parts">{{item[0]}}</text>
+            </view>
+            <view class="bazi-type">
+                <text class="bazi-name">坤造</text>
+                <text wx:for="{{mp.qianZaoKunZao}}" class="parts">{{item[1]}}</text>
+            </view>
+            <view class="bazi-type">
+                <text class="bazi-name">藏干</text>
+                <text wx:for="{{mp.zangGan}}" class="parts">{{item}}</text>
+            </view>
+            <view class="bazi-type">
+                <text class="bazi-name">支神</text>
+                <text wx:for="{{mp.zhiShen}}" class="parts">{{item}}</text>
+            </view>
+            <view class="bazi-type">
+                <text class="bazi-name">纳音</text>
+                <text wx:for="{{mp.naYin}}" class="parts">{{item}}</text>
+            </view>
+            <view class="bazi-type">
+                <text class="bazi-name">地势</text>
+                <text wx:for="{{mp.diShi}}" class="parts">{{item}}</text>
+            </view>
+        </view>
+        <!-- 分析 喜用神-->
+        <view class="attr">
+            <view class="attr-com">
+                <text style="color:#8c0000;">旺相休囚死：</text>
+                <text>{{mp.wangXiangXiuQiuSi}}</text>
+            </view>
+            <view class="attr-com">
+                <text style="color:#8c0000;">喜用神：</text>
+                <text>{{mp.xiYongShen}}</text>
+            </view>
+            <view class="attr-com">
+                <text style="color:#8c0000;">胎元：</text>
+                <text>{{mp.taiYuan}}</text>
+                <text style="color:#8c0000;">日空：</text>
+                <text>{{mp.riKong}}</text>
+            </view>
+            <view class="attr-com">
+                <text style="color:#8c0000;">起大运：</text>
+                <text>{{mp.qiDaYun}}</text>
+            </view>
+            <view class="attr-com">
+                <text style="color:#8c0000;">起大运：</text>
+                <text>{{mp.qiDaYun}}</text>
+            </view>
+            <view class="attr-com">
+                <text style="color:#8c0000;">起大运：</text>
+                <text>{{mp.qiDaYun}}</text>
+            </view>
+        </view>  
+    </view>
+</view>

@@ -1,0 +1,59 @@
+<scroll-view scroll-y class="container" scroll-top="{{scrollTop}}" scroll-with-animation>
+<!--<view class="container">-->
+    <view class="infos">
+        <image src="{{banner}}" class="banner" mode="widthFix"></image>
+        <view class="user-info">
+            <text class="detail">{{orderInfo.user_name}}，性别{{orderInfo.gender}}，出生于{{orderInfo.birthday}}。\n</text>
+            <text class="detail">现于{{orderInfo.creat_time}}求批八字，预知未来运势前程。</text>
+        </view>
+    </view>
+    <view class="info-tips">
+         <view class="infos-title">
+            <text>最准的八字批命为你预测未来</text>
+        </view>
+        <view class="title-img">
+            <image src="{{title_banner}}" class="banner" mode="widthFix"></image>
+        </view>
+    </view>
+    <view class="price-detail">
+        <view class="question">
+            <view>
+                <view class="type-detail">
+                    <text>测算项目：八字命格祥批</text>
+                </view>
+                <view class="total">
+                    <text>限时￥{{orderInfo.price}}元</text> 
+                    <text class="disc">总计￥138元</text>
+                    <button type="primary" bindtap="payHandler" class="pay-btn" style="background-color: #c3292f;"> 微信支付 </button>
+                </view>
+                <view class="prompt">
+                    <text>支付完成后，将为你解锁全部内容</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--解锁部分-->
+    <view class="unlock-box">
+        <view class="unlock-type" wx:for="{{unlock}}">
+            <view class="unlock-com unlock{{index + 1}}">
+                <text class="unlock-title">{{item.title}}</text>
+            </view>
+            <view wx:if="{{item.tips}}">
+                <text class="unlock-tips">{{item.tips}}</text>
+            </view>
+            <view class="unlock-btn" wx:if="{{item.btn}}" bindtap="goTop">
+                <image src="{{item.btn}}" class="banner" mode="widthFix"></image>
+            </view>          
+        </view>
+    </view>
+
+    <!--联系我们-->
+  <view class="contact">
+    <text>更多专业测算，请微信关注[灵机文化]\n</text>
+    <text>邮箱:<text class="number" selectable="{{true}}">customer@linghit.com</text> 电话:<text class="number" selectable="{{true}}">13360019610</text>\n</text>
+    <text>微信: <text class="number" selectable="{{true}}">s2852210945</text> QQ:<text class="number" selectable="{{true}}">2852210945</text>\n</text>
+    <text>在线时间周一至周五9:00-18:30</text>
+  </view>
+<!--</view>-->
+</scroll-view>

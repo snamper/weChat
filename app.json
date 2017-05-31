@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/payment/payment",
+    "pages/result/result",
+    "pages/collect/collect"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "八字精批",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#74381e",
+    "selectedColor": "#74381e",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/qimin-icon.png",
+      "selectedIconPath": "images/qimin-icon-select.png"
+    },
+    {
+      "pagePath": "pages/order/order",
+      "text": "我的订单",
+      "iconPath": "images/order-icon.png",
+      "selectedIconPath": "images/order-icon-select.png"
+    }]
+  }
+}

@@ -1,0 +1,44 @@
+.container {
+    background-color: #fdf6ea;
+    overflow: hidden;
+}
+.main {
+    padding: 0 28rpx;
+    font-size: 38rpx;
+}
+.user-info {
+    font-size: 32rpx;
+    position: relative;
+    margin: 28rpx 0;
+    border: 1px solid #e2ccb0;
+    border-radius: 10rpx;
+    background-color: #fff;
+    padding: 18rpx;
+    line-height: 44rpx;
+}
+.info {
+    display: flex;
+}
+.icon {
+    position: absolute;
+    width: 226rpx;
+    height: 152rpx;
+    top: -8rpx;
+    right: 18rpx;
+}
+.type {
+    border: 1px solid #e2ccb0;
+    border-radius: 10rpx;
+    margin-bottom: 12rpx;
+    line-height: 70rpx;
+    padding: 0 18rpx;
+    background: #fff url('https://zxcs.ggwan.com/forecastbazijingpibundle/images/icon_right.png') right 10rpx no-repeat;
+    background-size: 46rpx auto;
+    background-origin: content-box;
+}
+.contact {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}

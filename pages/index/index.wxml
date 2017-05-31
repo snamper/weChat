@@ -1,0 +1,174 @@
+<!--头部-->
+<scroll-view scroll-y class="container" scroll-top="{{scrollTop}}" scroll-with-animation>
+<!--<view class="container">-->
+  <view bindtap="bindViewTap" class="header">
+    <image src="{{header.banner}}" class="banner" mode="widthFix"></image>
+  </view>
+
+  <!--输入信息部分-->
+  <view>
+    <view class="tips">
+      <text>{{forms.tips}}</text>
+    </view>
+    <form class="form" bindsubmit="submitHandler">
+      <view class="form-box">
+        <view class="section section1">
+          <text class="sec-text-common">您的姓名</text>
+          <input placeholder="请输入姓名（汉字）" class="picker sec-input-common" cursor-spacing="30" placeholder-style="color: #b3b3b3;" name="username" />
+        </view>
+        <view class="section">
+          <text class="sec-text-common">您的性别</text>
+          <radio-group class="radio-group sec-input-common" name="sex">
+            <label class="radio radio1">
+              <radio value="{{1}}" checked="{{true}}" />
+              <text class="sec-text-common radio-text">男</text>
+            </label>
+            <label class="radio">
+              <radio value="{{0}}" />
+              <text class="sec-text-common radio-text">女</text>
+            </label>
+          </radio-group>
+        </view>
+        <view class="section">
+          <text class="sec-text-common">出生日期</text>
+          <picker mode="date" value="{{forms.date}}" bindchange="bindDateChange" name="date" class="sec-input-common">
+            <view class="picker picker-view">
+              {{forms.date}}
+            </view>
+          </picker>
+        </view>
+        <view class="section">
+          <text class="sec-text-common">出生时辰</text>
+          <picker bindchange="bindTimeChange" value="{{forms.timeIndex}}" range="{{forms.time}}" name="time" class="sec-input-common">
+            <view class="picker picker-view">
+              {{forms.time[forms.timeIndex]}}
+            </view>
+          </picker>
+        </view>
+        <view class="section">
+          <text class="sec-text-common">您的邮箱</text>
+          <input placeholder="输入邮箱（方便随时查看结果）" class="picker sec-input-common" cursor-spacing="30" placeholder-style="color: #b3b3b3;" name="email" />
+        </view>
+      </view>
+      <view class="agree">
+        <checkbox-group name="sendemial">
+          <checkbox value="{{1}}" checked="{{forms.agreeChecked}}" />
+          <text class="agree-tip">同意“个人隐私协议”,把测算信息邮件发至您的邮箱</text>
+        </checkbox-group>
+      </view>
+      <view class="sort-intro">
+        <button type="primary" formType="submit" bindconfirm="submitHandler" style="background-color:#b8252d"> 马上测算 </button>
+      </view>
+    </form>
+  </view>
+
+  <!--揭晓一生-->
+  <view class="reveal">
+    <view class="tips">
+      <text>{{reveal.tips}}</text>
+    </view>
+    <view class="reveal-banner">
+      <image src="{{reveal.banner}}" class="banner" mode="widthFix"></image>
+    </view>
+    <view class="reveal-type">
+      <view class="type{{index+1}}" wx:for="{{reveal.types}}">
+        <image src="{{item.type_icon}}" class="banner" mode="widthFix"></image>
+        <text class="reveal-names">{{item.names}}</text>
+        <text class="reveal-infos">{{item.infos}}</text>
+      </view>
+    </view>
+    <view class="reveal-footer">
+      <image src="{{reveal.footer_banner}}" class="banner" mode="widthFix"></image>
+    </view>
+    <view class="predict">
+      <button type="primary" bindtap="goTop" style="background-color:#b8252d;line-height:80rpx;"> 我的八字预测 ></button>
+    </view>
+  </view>
+
+  <!--用户反馈-->
+  <view class="feedback">
+    <view class="tips">
+      <text>{{feedback.tips}}</text>
+    </view>
+    <view class="exp-list">
+      <view class="exp" wx:for="{{feedback.exp}}">
+        <view class="photo">
+          <image src="{{item.photo}}" class="banner" mode="widthFix"></image>
+        </view>
+        <view class="desc">
+          <text>{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="feedback-footer">
+      <image src="{{feedback.footer_banner}}" class="banner" mode="widthFix"></image>
+    </view>
+    <view class="predict">
+      <button type="primary" bindtap="goTop" style="background-color:#b8252d;line-height:80rpx;"> 预测我的未来 ></button>
+    </view>
+  </view>
+
+  <!--对我的影响-->
+  <view class="affect">
+    <view class="tips-long">
+      <text>{{affect.tips}}</text>
+    </view>
+    <view class="exp-list">
+      <view class="exp" wx:for="{{affect.exp}}">
+        <view class="photo">
+          <image src="{{item.photo}}" class="banner" mode="widthFix"></image>
+        </view>
+        <view class="desc">
+          <text class="desc-title">{{item.titles}}</text>
+          <text>{{item.desc}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="affect-footer">
+      <image src="{{affect.footer_banner}}" class="banner" mode="widthFix"></image>
+    </view>
+    <view class="intro">
+      <text>{{affect.intro}}</text>
+    </view>
+    <view class="predict">
+      <button type="primary" bindtap="goTop" style="background-color:#b8252d;line-height:80rpx;"> 我的喜用神 ></button>
+    </view>
+  </view>
+
+  <!--规避人生的低潮-->
+  <view class="avoid">
+    <view class="tips-long">
+      <text>{{avoid.tips}}</text>
+    </view>
+    <view class="avoid-banner">
+      <image src="{{avoid.banner}}" class="banner" mode="widthFix"></image>
+    </view>
+    <view class="avoid-footer">
+      <image src="{{avoid.footer_banner}}" class="banner" mode="widthFix"></image>
+    </view>
+    <view class="predict long">
+      <button type="primary" bindtap="goTop" style="background-color:#b8252d;line-height:80rpx;"> 预测一生命运 ></button>
+    </view>
+  </view>
+
+  <!--马上测算-->
+  <view class="immediate">
+    <view class="immediate-banner">
+      <image src="{{immediate.banner}}" class="banner" mode="widthFix"></image>
+    </view>
+    <view class="benefit">
+      <text>{{immediate.benefit}}</text>
+    </view>
+    <view class="predict long">
+      <button type="primary" bindtap="goTop" style="background-color:#b8252d;line-height:80rpx;"> 马上测算 </button>
+    </view>
+  </view>
+
+  <!--联系我们-->
+  <view class="contact">
+    <text>更多专业测算，请微信关注[灵机文化]\n</text>
+    <text>邮箱:<text class="number" selectable="{{true}}">customer@linghit.com</text> 电话:<text class="number" selectable="{{true}}">13360019610</text>\n</text>
+    <text>微信: <text class="number" selectable="{{true}}">s2852210945</text> QQ:<text class="number" selectable="{{true}}">2852210945</text>\n</text>
+    <text>在线时间周一至周五9:00-18:30</text>
+  </view>
+</scroll-view>

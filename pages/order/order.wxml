@@ -1,0 +1,45 @@
+<view class="container">
+    <view class="search-box">
+        <view class="tips">
+            <text>请输入订单号，即可查看已付费的测算结果</text>
+        </view>
+        <view class="search">
+            <text class="search-type">订单号</text>
+            <input value="{{order_id}}" placeholder="您可以输入订单号找回丢失的订单哦" placeholder-class="placs" class="order-input" confirm-type="search" bindinput="keyInput" bindconfirm="searchOrder"/>
+        </view>
+        <view class="search-btn" bindtap="searchOrder">
+            <button type="primary" bindtap="goTop" style="height:80rpx;"> 立即查询 </button>
+        </view>
+    </view>
+    <view class="order-box">
+        <view class="title">
+            <text>历史纪录</text>
+        </view>
+        <!--<view class="no-order">
+            <text>无历史订单！</text>
+        </view>-->
+        <view class="order-detail" wx:for="{{orderInfoList}}" wx:key="unique">
+            <view class="type">
+                <text class="type-name">类型：</text>
+                <text class="type-detail">在线测算_八字精批</text>
+            </view>
+            <view class="type">
+                <text class="type-name">订单号：</text>
+                <text class="type-detail">{{item.order_id}}</text>
+            </view>
+            <view class="type">
+                <text class="type-name">状态：</text>
+                <text class="type-detail">{{item.status}}</text>
+            </view>
+            <view class="look-btn">
+                 <button type="primary" bindtap="goLook" style="height:80rpx;"> 点击查看 </button>
+            </view>
+        </view>
+    </view>
+   <view class="contact">
+    <text>更多专业测算，请微信关注[灵机文化]\n</text>
+    <text>邮箱:<text class="number" selectable="{{true}}">customer@linghit.com</text> 电话:<text class="number" selectable="{{true}}">13360019610</text>\n</text>
+    <text>微信: <text class="number" selectable="{{true}}">s2852210945</text> QQ:<text class="number" selectable="{{true}}">2852210945</text>\n</text>
+    <text>在线时间周一至周五9:00-18:30</text>
+  </view>
+</view>

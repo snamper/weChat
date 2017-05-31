@@ -1,0 +1,46 @@
+.container {
+    background-color: #fdf6ea;
+    font-size: 32rpx;
+    height: auto;
+}
+
+/*******************八字命盘********************/
+.mp-title {
+    color: #8c0000;
+    text-align: center;
+    font-size: 44rpx;
+    margin-top: 28rpx;
+}
+.mp-user {
+    color: #8c0000;
+    line-height: 64rpx;
+    padding: 28rpx;
+}
+.sort-detail {
+    color: black;
+}
+.bazi {
+    margin: 0 28rpx;
+    padding: 18rpx 0;
+    border-top: 1px dashed #000;
+    border-bottom: 1px dashed #000;
+}
+.bazi-type {
+    padding: 14rpx 0;
+}
+.parts, .bazi-name {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.parts {
+    width: 22%;
+}
+.bazi-name {
+    width: 12%;
+    color: #8c0000;
+}
+.emps {
+    color: #8c0000;
+    font-weight: bold;
+}

@@ -1,0 +1,25 @@
+/**app.wxss**/
+page {
+    height: 100%;
+}
+.container {
+  background-color: #ffdc87;
+  height: 100%;
+} 
+.banner {
+  width: 100%;
+  display: block;
+}
+
+/*contact*/
+.contact {
+  line-height: 52rpx;
+  font-size: 33rpx;
+  color: rgb(248, 219, 146);
+  background-color: rgb(148, 26, 26);
+  text-align: center;
+  padding: 26rpx 0;
+}
+.member {
+  text-decoration: underline;
+}

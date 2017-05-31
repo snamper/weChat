@@ -1,0 +1,103 @@
+/***************infos****************/
+.user-info {
+    background: url('https://zxcs.linghit.com/ordersbundle/newimages/bazi_banner_02.jpg') 0 0 no-repeat;
+    background-size: 100% 100%;
+    height: 244rpx;
+    font-size: 32rpx;
+    color: #871d1a;
+}
+.detail {
+    display: block;
+    width: 465rpx;
+    margin: 0 auto;
+    line-height: 1.4;
+}
+.infos-title {
+    margin: 13rpx 0;
+    height: 54rpx;
+    font-size: 34rpx;
+    background: url('https://zxcs.linghit.com/ordersbundle/newimages/bazi_title.png') 0 0 no-repeat;
+    text-align: center;
+    line-height: 60rpx;
+    background-size: 100% 100%;
+    color: #fff;
+}
+.title-img {
+    width: 525rpx;
+    margin: 0 auto 20rpx;
+}
+.price-detail {
+    /*border: 1px solid #dddddd;*/
+    border-top: 1px solid #dddddd;
+    overflow: hidden;
+    background-color: #ffffff;
+    font-size: 30rpx;
+}
+.type-detail {
+    padding-bottom: 18rpx;
+    border-bottom: 1px solid #a91c27;
+}
+.question {
+    padding: 18rpx 22rpx 0;
+    color: #a91c27;
+    border-bottom: 1px solid #a91c27;
+    border-top: 1px solid #a91c27;
+    line-height: 50rpx;
+}
+.total {
+    text-align: right;
+    color: red;
+    padding-top: 10rpx;
+}
+.disc {
+    text-decoration: line-through;
+    margin-left: 70rpx;
+    color: #552d1a;
+}
+.pay-btn {
+    margin-top: 15rpx;
+}
+.prompt {
+    color: #ac262b;
+    text-align: center;
+    line-height: 2;
+}
+/*****************unlock********************/
+.unlock-box {
+    padding: 25rpx;
+    font-size: 32rpx;
+    color: #ac262b;
+    background-color: #f9dfa6;
+}
+.unlock-type {
+    margin-top: 20rpx;
+}
+.unlock-com {
+    background: url('https://zxcs.linghit.com/ordersbundle/newimages/bazi_title_bg.png') 0 0 no-repeat;
+    background-size: 100% 100%;
+    font-size: 36rpx;
+    color: #871d1a;
+    height: 74rpx;
+    line-height: 74rpx;
+    padding-left: 68rpx;
+}
+.unlock1,.unlock2 {
+    text-align: center;
+    padding-left: 0;
+}
+.unlock-title::before {
+    display: inline-block;
+    content: "";
+    width: 35rpx;
+    height: 35rpx;
+    margin-right: 35rpx;
+    background: url('https://zxcs.linghit.com/ordersbundle/newimages/bazi_icon.png') 0 0 no-repeat;
+    background-size: 100% 100%;
+    transform: translateY(4rpx);  
+}
+.unlock-tips {
+    display: block;
+    text-indent: 2em;
+    margin: 16rpx 0;
+    line-height: 45rpx;
+}

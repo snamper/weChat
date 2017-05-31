@@ -1,0 +1,77 @@
+.container {
+    background-color: #fff;
+}
+.search-box {
+    padding: 0 16rpx;
+    font-size: 32rpx;
+}
+.tips {
+    color: #903c23;
+    line-height: 64rpx;
+}
+.search {
+    display: flex;
+    line-height: 80rpx;
+    border: 1px solid #c8c6c6;
+    border-radius: 10rpx;
+    margin-bottom: 16rpx;
+}
+.search-type {
+    width: 108rpx;
+    flex: 1 1 108rpx;
+    height: 80rpx;
+    text-align: center;
+}
+.order-input {
+    height: 80rpx;
+    padding-left: 20rpx;
+    flex: 1 1 580rpx;
+}
+.search-btn {
+    width: 680rpx;
+    margin: 0 auto;
+}
+.placs {
+    color: #b6b6b6;
+}
+/**************订单部分******************/
+.order-box {
+    margin-top: 48rpx;
+    font-size: 32rpx;
+}
+.title {
+    background-color: #d2a771;
+    text-align: center;
+    font-size: 34rpx;
+    color: #fff;
+    padding: 12rpx 0;
+}
+.no-order {
+    height: 288rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+}
+.order-detail {
+    margin: 32rpx;
+}
+.type {
+    display: flex;
+    line-height: 56rpx;
+}
+.type-name {
+    text-align: left;
+    flex: 1 1;
+}
+.type-detail {
+    text-align: right;
+    flex: 1 1;
+}
+.look-btn {
+    padding: 16rpx 32rpx;
+}
+.contact {
+    background-color: #d2a771;
+    color: #fff;
+}

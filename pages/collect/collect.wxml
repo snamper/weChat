@@ -1,0 +1,32 @@
+<view class="container">
+    <view class="main">
+        <view class="user-info">
+            <view class="info">
+                <text class="info-title">缘<text style="visibility:hidden;">占位</text>主：</text>
+                <text class="content">{{user.name}}</text>
+            </view>
+            <view class="info">
+                <text class="info-title">性<text style="visibility:hidden;">占位</text>别：</text>
+                <text class="content">{{user.gender}}</text>
+            </view>
+            <view class="info">
+                <text class="info-title">出生资料：</text>
+                <text class="content">{{user.lunar}}\n{{user.birthday}}</text>
+            </view>
+            <view class="icon">
+                <image src="{{icon}}" class="banner" mode="widthFix"></image>
+            </view>
+        </view>
+        <view class="option">
+            <view class="type" wx:for="{{types}}" bindtap="viewRe" data-value="{{item.value}}">{{item.text}}</view>
+        </view>
+    </view>
+   
+    <!--footer-->
+    <view class="contact">
+        <text>更多专业测算，请微信关注[灵机文化]\n</text>
+        <text>邮箱:<text class="number" selectable="{{true}}">customer@linghit.com</text> 电话:<text class="number" selectable="{{true}}">13360019610</text>\n</text>
+        <text>微信: <text class="number" selectable="{{true}}">s2852210945</text> QQ:<text class="number" selectable="{{true}}">2852210945</text>\n</text>
+        <text>在线时间周一至周五9:00-18:30</text>
+    </view>
+</view>
